@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="indix.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form-wrapper sign-in">
+    <form action="signin.html">
+        <h2> sign up</h2>
+        <div class="input-group">
+            <input name="name" type="text" required>
+            <label for=""> your name ...</label>
+        </div>
+        <div class="input-group">
+            <input name="email" type="email" required>
+            <label for=""> your email ...</label>
+        </div>
+        <div class="input-group">
+            <input name="password" type="password" required>
+            <label for=""> your password ...</label>
+        </div>
+        <div class="input-group">
+            <input type="password" name="conpass" required>
+            <label for=""> your confarim password ...</label>
+        </div>
+        <div class="remember">
+            <label><input type="checkbox"> remember my</label>
+        </div>
+      <div>
+       <H4 style="color: rgb(255, 255, 255);"> YOUR CITY</H4>
+        <select>
+            <option>Giza</option>
+            <option>6october</option>
+            <option>Elmonib</option>
+            <option>Elharm</option>
+        </select>
+      </div>
+
+        <button type="submit"  onclick="sign()">login</button>
+        <div class="signup">
+            <label>I have accont <a href="signin.html" class="signupbtn-link"> login</a></label>
+        </div>
+    </form>
+        </div>
+    </div>
+</body>
+
+<script>
+    function sign(){
+        window.location.href="signin.html"
+
+    }
+</script>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Colorful Page with Header and Footer</title>
+    <style>
+        body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.page-container {
+    position: relative;
+}
+
+.header {
+    padding: 10px;
+    text-align: center;
+    background-color: lightgray;
+    background: linear-gradient(45deg, #84bade, #4e26d3);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    margin: 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-bar {
+    margin-top: 10px;
+}
+
+.search-bar input {
+    padding: 5px;
+}
+
+.search-bar button {
+    padding: 5px 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content h1 {
+    color: white;
+}
+
+.footer {
+    padding: 10px;
+    text-align: center;
+    color: white;
+    margin-top: 80px;
+}
+
+.icons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    background-color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    padding: 8px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-visible {
+    display: block;
+}
+
+nav {
+      display: flex;
+      justify-content: space-around;
+      background-color: #4b4572;
+      padding: 10px;
+   
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .box {
+    flex: 0 0 calc(33.33% - 20px); /* تم تعديل هنا لاستخدام flex */
+    background-color: var(--bg-color, #3498db);
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 50px auto;
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+p {
+    margin: 0;
+}
+section {
+      padding: 20px;
+      margin: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      color: #333;
+    }
+    button{
+      background-color: rgb(152, 171, 207);
+      margin-left: 1050px;
+  padding: 16px;
+    }
+    a :hover{
+      background-color: aqua;
+      cursor:cell;
+    }
+
+    </style>
+</head>
+<body>
+
+    <div class="page-container"   id="gradient-header">
+        <header class="header" style="background-color: rgb(178, 183, 239);">
+            <div class="logo" style="font-style: italic;">Neighbors network</div>
+           
+            <div class="search-bar">
+                <input type="text" placeholder="search">
+                
+            </div><button onclick="toggleMenu()"  style="margin-left: 950px;background-color: #a6d1e3;">serves</button>
+            <br>
+            <nav>
+                <a href="school.html">education</a>
+                <a href="ho.html">Hospitals</a>
+                <a href="gover.html">Government places</a>
+                <a href="parking.html">Parking</a>
+                <a href="vodo.html">Volunteer </a>
+                <a href="chat.html">Chat</a>
+                <a href="share.html">Share </a>
+            
+                <a href="spac.html">Other services</a>
+              </nav>
+        </header>
+
+        <div class="content" style="background-color: #ffffff;">
+            <section id="section1">
+                <h2>education</h2>
+                <p>This page is about education and exchange of skills
+                    Locations of lesson centers
+                    And school places</p>
+                    <a href="school.html"><button>education</button></a>
+              </section>
+              
+              <section id="section2">
+                <h2>Hospitals</h2>
+                <p>Hospital places
+                    And clinics within the area</p>
+                    <a href="ho.html"><button>Hospitals</button></a>
+              </section>
+            
+              <section id="section3">
+                <h2>Government places</h2>
+                <p>Government places such as the civil registry and others</p>
+                <a href="gover.html"><button>Government</button></a>
+               
+              </section>
+            
+            
+              <section id="section4">
+                <h2>Parking</h2>
+                <p>It shows the parking locations and their average fees</p>
+                <a href="parking.html"><button>Parking</button></a>
+              </section>
+            
+              <section id="section5">
+                <h2>Volunteer </h2>
+                <p>Volunteer within a charitable organization or donate to a charitable organization</p>
+                <a href="vodo.html"><button>Volunteer</button></a>
+              </section>
+            
+              <section id="section6">
+                <h2>Chat</h2>
+                <p>Chat with doctors, teachers, or diabetics</p>
+                <a href="chat.html"><button>Chat</button></a>
+              </section>
+            
+            
+              <section id="section7">
+                <h2>Share </h2>
+                <p>Share a local advertisement, local competition, or local event</p>
+                <a href="share.html"><button>Share</button></a>
+              </section>
+            
+              <section id="section8">
+                <h2>Other services</h2>
+                <p>Any other services, plumbing and other services</p>
+                <a href="spac.html"><button>Other services</button></a>
+              </section>
+            
+        </div>
+
+        <footer class="footer" style="background-color: rgb(212, 210, 216);">
+            <div class="icons">
+                <span><a href="school.html"><img src="download1.png"  style="height: 50px;width: 60px;border-radius: 99px;"></a></span>
+                <span><a href="ho.html"><img src="download2.png" style="height: 50px;width: 60px;border-radius: 99px;"></a></span> 
+                <span><a href="share.html"><img src="download4.png" style="height: 50px;width: 60px;border-radius: 99px;"></a></span>
+                <span><a href="parking.html"><img src="download3.png" style="height: 50px;width: 60px;border-radius: 99px;"></a></span>
+               
+                <span><a href=""><img src="download 5.jpg" style="height: 50px;width: 60px;border-radius: 99px;"></a></span>
+            </div>
+        </footer>
+
+        <div class="menu" id="main-menu">
+            <ul>
+                <li><a href="qr.html">Add Shop</a></li>
+                <li><a href="share.html">Share</a></li>
+                <li><a href="#">Callus</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pro.html">Profile</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body><script>
+    function toggleMenu() {
+    var menu = document.getElementById('main-menu');
+    menu.classList.toggle('menu-visible');
+}
+
+</script>
+</html>
+

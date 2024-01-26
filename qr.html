@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #video-container {
+      position: relative;
+    }
+
+    #video-preview {
+      width: 100%;
+      max-width: 600px;
+      height: auto;
+      border: 2px solid #ccc;
+    }
+
+    #capture-btn {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: #3498db;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <title>Camera App</title>
+</head>
+<body>
+
+<div id="video-container">
+  <video id="video-preview" playsinline autoplay></video>
+  <button id="capture-btn"> Scan QRCODE</button>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById('video-preview');
+    const captureButton = document.getElementById('capture-btn');
+
+    // Access the user's camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+      .then((stream) => {
+        video.srcObject = stream;
+
+        captureButton.addEventListener('click', () => {
+          // Capture a photo from the video stream
+          const canvas = document.createElement('canvas');
+          canvas.width = video.videoWidth;
+          canvas.height = video.videoHeight;
+          canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
+
+          // Display the captured photo (you can save it to a server or do further processing)
+          const capturedPhoto = new Image();
+          capturedPhoto.src = canvas.toDataURL('image/png');
+
+          // Append the captured photo to the document (for demonstration purposes)
+          document.body.appendChild(capturedPhoto);
+        });
+      })
+      .catch((error) => {
+        console.error('Error accessing camera:', error);
+      });
+  });
+</script>
+
+</body>
+</html>
